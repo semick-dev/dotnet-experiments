@@ -30,7 +30,7 @@ jobs:
 
       - name: Run the hashing experiment
         run: |
-          dotnet run --project experiment/hashing
+          dotnet run --project experiment/hashing --framework net6.0
 
       - uses: actions/setup-dotnet@v3
         with:
@@ -38,7 +38,7 @@ jobs:
 
       - name: Run the hashing experiment
         run: |
-          dotnet run --project experiment/hashing 
+          dotnet run --project experiment/hashing --framework net5.0
 
   run_on_ubuntu:
     # The type of runner that the job will run on
@@ -49,17 +49,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '6.x'
 
       - name: Run the hashing experiment
         run: |
-          dotnet run --project experiment/hashing 
+          dotnet run --project experiment/hashing --framework net6.0
 
       - uses: actions/setup-dotnet@v3
         with:
@@ -67,4 +63,4 @@ jobs:
 
       - name: Run the hashing experiment
         run: |
-          dotnet run --project experiment/hashing 
+          dotnet run --project experiment/hashing --framework net5.0
