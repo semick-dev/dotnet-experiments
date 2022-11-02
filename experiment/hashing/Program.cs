@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace hashing
 {
     public class Program
